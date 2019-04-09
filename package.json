@@ -1,12 +1,14 @@
 {
   "name": "elect",
   "version": "0.0.0",
-  "main": "main.js",
+  "main": "./main.js",
   "scripts": {
     "ng": "ng",
+    "myelectron": "ng build --base-href ./ && electron-packager . ZukaApp",
     "electron": "ng build --base-href ./ && electron .",
-    "package": "electron-packager . ZukaApp --platform=linux --arch=x64",
+    "package": "electron-packager . ZukaApp",
     "build-ios": "electron-packager . ZukaApp --platform=darwin --arch=x64",
+    "build-win": "electron-packager ./dist/index.html ZukaApp1 --platform=win32 ",
     "electron-tsc": "tsc main.ts && ng build --base-href ./ && electron .",
     "start": "ng serve",
     "build": "ng build",
